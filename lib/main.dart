@@ -128,6 +128,16 @@ printNumbers()
 --------------------------------
 S E T:unodered collection of unique elemets, and have no dublicatees
 Set<String> uniquenames={"A","B"}
+
+-------------------------------------------------------------
+M A P->stored as key value pairs
+Map user={
+'name':'Mehul',
+'age':21
+}
+print(user['name'])
+print(user['age'])
+
 */
 
   @override
