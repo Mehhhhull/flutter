@@ -1,153 +1,169 @@
-# 📱 Flutter Basics – Dart Programming Fundamentals
+📱 Flutter Basics – Programming Fundamentals (My Notes)
 
-> Personal learning notes while starting Flutter.  
-> Initially written inside `main.dart`, later cleaned and documented here to build strong fundamentals.
+These are my raw learning notes while starting Flutter & Dart.
+I wrote all this directly inside main.dart while learning — this README is a cleaned, structured version so I don’t forget fundamentals later.
 
----
+🚀 1. Dart Programming Fundamentals
 
-## 🚀 Why This Exists
+Before Flutter UI, Dart logic matters. Flutter is useless if your basics are weak.
 
-Flutter UI is useless without Dart logic.  
-These notes focus on **core programming concepts** that power every Flutter app.
-
----
-
-## 📦 Variables & Data Types
+📦 2. Variables & Data Types
 
 Variables store data in memory.
 
-```dart
 String name = "Mehul";
 int age = 21;
 double pi = 3.14159;
 bool isBeginner = true;
-Common Types
+
+Common Dart Types
+
 String → text
 
 int → whole numbers
 
-double → decimal values
+double → decimal numbers
 
 bool → true / false
 
-Dart is strongly typed. No guessing, no shortcuts.
+⚠️ Dart is strongly typed — type safety is not optional.
 
-➕ Basic Math Operators
-dart
-Copy code
+➕ 3. Basic Math Operators
+
+Used for calculations:
+
 +   // addition
 -   // subtraction
 *   // multiplication
 /   // division
-%   // remainder
+%   // remainder (modulus)
 ++  // increment
 --  // decrement
-🔍 Comparison Operators
+
+🔍 4. Comparison Operators
+
 Used in conditions:
 
-dart
-Copy code
 ==   // equal
 !=   // not equal
 >    // greater than
 <    // less than
 >=   // greater than or equal
 <=   // less than or equal
-🔗 Logical Operators
-dart
-Copy code
-&&   // AND – both must be true
-||   // OR – any one true
-!    // NOT – reverse condition
-🔀 Control Flow
-If / Else
-dart
-Copy code
+
+🔗 5. Logical Operators
+
+Used to combine conditions:
+
+&&   // AND (both conditions must be true)
+||   // OR (any one condition true)
+!    // NOT (reverse the condition)
+
+🔀 6. Control Flow (Decision Making)
+If–Else
 if (condition) {
-  // code
+  // do something
 } else {
-  // code
+  // do something else
 }
+
 Else If Ladder
-dart
-Copy code
 if (condition1) {
 } else if (condition2) {
 } else {
 }
+
 Switch Case
-dart
-Copy code
 switch (value) {
   case "A":
+    // code
     break;
   case "B":
+    // code
     break;
   default:
+    // code
 }
-Use switch when comparing one value against many cases.
 
-🔁 Loops
-For Loop (known iterations)
-dart
-Copy code
+
+Use switch when you’re checking one variable against many values.
+
+🔁 7. Loops
+For Loop
+
+Use when you know the number of iterations.
+
 for (int i = 0; i <= 5; i++) {
   print(i);
 }
-break → exit loop
 
-continue → skip iteration
 
-While Loop (unknown iterations)
-dart
-Copy code
+break → exits loop
+
+continue → skips current iteration
+
+While Loop
+
+Use when you don’t know how many times the loop will run.
+
 int countDown = 5;
-
 while (countDown > 0) {
   print(countDown);
   countDown--;
 }
-🧩 Functions / Methods
+
+🧩 8. Functions / Methods
+
+Functions help avoid repeating code.
+
 Simple Function
-dart
-Copy code
 void greet() {
   print("Hello");
 }
+
 Function with Parameters
-dart
-Copy code
 void greet(String name) {
   print("Hello " + name);
 }
+
 Function with Return Value
-dart
-Copy code
 int add(int a, int b) {
   return a + b;
 }
 
 int mySum = add(3, 6);
+
+
+🧠 Rule:
+
 void → returns nothing
 
-Return type must match returned value
+return type must match the value returned
 
-🗂️ Data Structures
+🗂️ 9. Data Structures
 📋 List (Ordered, Allows Duplicates)
-dart
-Copy code
 List<int> numbers = [1, 2, 3];
 
 for (int i = 0; i < numbers.length; i++) {
   print(numbers[i]);
 }
-🎯 Set (Unique, Unordered)
-dart
-Copy code
+
+
+Indexed
+
+Ordered
+
+Duplicates allowed
+
+🎯 Set (Unordered, Unique Only)
 Set<String> uniqueNames = {"A", "B"};
+
+
+No duplicates
+
+Order not guaranteed
+
 🗺️ Map (Key–Value Pairs)
-dart
-Copy code
 Map user = {
   'name': 'Mehul',
   'age': 21,
@@ -155,18 +171,22 @@ Map user = {
 
 print(user['name']);
 print(user['age']);
-Used heavily for APIs and JSON data.
 
-🧱 Flutter App Entry Structure
-Main Function
-dart
-Copy code
+
+Used heavily for:
+
+JSON
+
+APIs
+
+User data
+
+🧱 10. Flutter App Entry Structure
 void main() {
   runApp(MyApp());
 }
+
 Root Widget
-dart
-Copy code
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -176,8 +196,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 MaterialApp → app wrapper
 
-Scaffold → basic page layout
-
-
+Scaffold → page structure (AppBar, body, etc.)
