@@ -4,28 +4,13 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
   /*
-Scaffold: it is a skeletobn widget that holds different parts of your app.
+Scaffold: it is a skeleton widget that holds different parts of your app.
 
+
+STL-StateLess Widget
+STF-StateFul Widget
 */
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blue),
-       : Center(
-          child:Container(
-          height:300,
-          width:300.
-          color:Colors.deepdeepPurple,
-        )
-        ),
-      
 
-    ); //Material App
-  }
-}
+class NewApp extendsStateless
+  
