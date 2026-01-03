@@ -40,7 +40,10 @@ class NewApp extends StatelessWidget {
           ],
           leading:CircleAvatar(child:Text("M")),
         ),
-        body:Text("MKS"),
+        body:Center(child: Text(
+          "MKS"
+          
+          ),),
       )
       );
   }
