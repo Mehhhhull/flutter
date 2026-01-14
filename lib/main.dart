@@ -1,10 +1,21 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:myapp/home_page.dart';
 
 void main() {
   runApp(const NewApp());
 }
+
+class NewApp extends StatelessWidget {
+  const NewApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomePage(),
+    );
+  }
+}
+
 
 /*
 Scaffold: it is a skeleton widget that holds different parts of your app.
@@ -79,48 +90,3 @@ return MaterialApp(
           put this in container and then give properties to that container and all set and image as child.
           to make the circular put link in ClipRrect
 */
-
-class NewApp extends StatelessWidget {
-  const NewApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          centerTitle: true,
-          title: Text("hELLO"),
-          actions: [Icon(Icons.home), Icon(Icons.search)],
-          leading: CircleAvatar(child: Text("M")),
-        ),
-        body: Column(
-          children: [
-            Text("M"),
-            CircleAvatar(child: Text("M")),
-            Container(
-              margin:EdgeInsets.all(20),
-              padding:EdgeInsets.all(20),
-              width: 300,
-              height: 300,
-              
-              decoration:BoxDecoration(
-              color: Colors.pink,
-              borderRadius:BorderRadius.circular(20.0),
-              ),
-              child:Text("M", style: TextStyle(fontSize: 20)),
-              
-              ),
-                onPressed:() {
-                    print("I clicked the btn")
-                },
-              ElevatedButton(onPressed:(){},child:Text("Btn")),
-              TextButton(onPressed: (){}, child: Text("Btn")),
-              IconButton(onPressed: (){}, icon: Icon(Icons.home))
-              
-          ],
-        ),
-      ),
-    );
-  }
-}
